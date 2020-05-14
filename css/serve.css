@@ -1,0 +1,58 @@
+.vision{
+ border:5px solid black;
+box-shadow: 2px 5px 16px gray; 
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 60px;
+}
+
+#myBtn:hover {
+  background-color: #DBDBDB;
+}
+
+/*spin  */
+    @keyframes spin {
+  from{
+    transform: rotateY(0deg);
+    moz-transform: rotateY(0deg); //Firefox
+    ms-transform: rotateY(0deg); //Microsoft Browsers
+  }
+  to{
+    transform: rotateY(360deg);
+    moz-transform: rotateY(360deg); //Firefox
+    ms-transform: rotateY(360deg); //Microsoft Browsers
+  }
+}
+@-webkit-keyframes spin{
+  from{-webkit-transform: rotateY(0deg);}
+  to{-webkit-transform: rotateY(360deg);}
+}
+.imageSpin{
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+}
